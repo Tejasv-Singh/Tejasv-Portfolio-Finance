@@ -18,17 +18,18 @@ export function MarketCommand() {
                     <div className="h-px flex-1 bg-gradient-to-r from-terminal-green/50 to-transparent" />
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-[500px]">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="border border-neutral-800 bg-terminal-black p-2 rounded-sm shadow-2xl h-[420px]"
+                        className="border border-neutral-800 bg-terminal-black p-2 rounded-sm shadow-2xl h-full"
                     >
                         <MarketOverview
                             colorTheme="dark"
-                            height={400}
+                            height="100%"
                             width="100%"
+                            showFloatingTooltip
                             tabs={[
                                 {
                                     title: "Indices",
@@ -56,13 +57,13 @@ export function MarketCommand() {
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="border border-neutral-800 bg-terminal-black p-2 rounded-sm shadow-2xl h-[420px]"
+                        className="border border-neutral-800 bg-terminal-black p-2 rounded-sm shadow-2xl h-full"
                     >
                         <TechnicalAnalysis
                             symbol="NSE:NIFTY"
                             colorTheme="dark"
                             width="100%"
-                            height={400}
+                            height="100%"
                         />
                     </motion.div>
                 </div>
