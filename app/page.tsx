@@ -7,6 +7,8 @@ import { Research } from "@/components/Research";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 
+import { MarketCommand } from "@/components/MarketCommand";
+
 export default function Home() {
   return (
     <main className="min-h-screen relative font-sans selection:bg-terminal-green selection:text-black">
@@ -15,6 +17,7 @@ export default function Home() {
 
       <div className="pt-24 space-y-0">
         <Hero />
+        <MarketCommand />
         <Projects />
         <Research />
         <Skills />
