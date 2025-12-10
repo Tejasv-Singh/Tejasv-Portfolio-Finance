@@ -4,19 +4,22 @@ import { TickerTape as TVTickerTape } from "react-ts-tradingview-widgets";
 
 export function TickerTape() {
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 bg-terminal-black">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-terminal-black h-[46px] overflow-hidden">
             <TVTickerTape
                 symbols={[
-                    { proName: "BSE:SENSEX", title: "SENSEX" },
+                    { proName: "FOREXCOM:SPXUSD", title: "S&P 500" },
+                    { proName: "FOREXCOM:NSXUSD", title: "US 100" },
+                    { proName: "FX_IDC:EURUSD", title: "EUR/USD" },
+                    { proName: "BITSTAMP:BTCUSD", title: "Bitcoin" },
+                    { proName: "BITSTAMP:ETHUSD", title: "Ethereum" },
                     { proName: "NSE:NIFTY", title: "NIFTY 50" },
-                    { proName: "NSE:BANKNIFTY", title: "BANK NIFTY" },
-                    { proName: "NSE:RELIANCE", title: "RELIANCE" },
-                    { proName: "NSE:INFY", title: "INFOSYS" },
-                    { proName: "NSE:TATASTEEL", title: "TATA STEEL" },
+                    { proName: "BSE:SENSEX", title: "SENSEX" },
                 ]}
+                showSymbolLogo={true}
+                isTransparent={false}
                 displayMode="adaptive"
                 colorTheme="dark"
-                isTransparent={false} // Ensure it has background to cover hero overlap if any
+                locale="en"
             />
         </div>
     );
